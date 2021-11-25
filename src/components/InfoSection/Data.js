@@ -1,5 +1,13 @@
+import animationDataOne from "../../lotties/people_edu_2.json";
+import animationDataTwo from "../../lotties/img_reading.json";
+import animationDataThree from "../../lotties/goals.json";
+import animationDataFour from "../../lotties/signup.json";
+
+
+
 export const homeObjectOne = {
     id: 'about',
+    to: '/About',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
@@ -10,13 +18,16 @@ export const homeObjectOne = {
     imgStart: false,
     img: require('../../images/study_2.svg').default,
     alt: 'study',
+    animation: animationDataOne,
     dark: true,
     primary: true,
-    darkText: false
+    darkText: false,
+    colorWave: '#f9f9f9'
 };
 
 export const homeObjectTwo = {
     id: 'learning',
+    to: '/Learning',
     lightBg: true,
     lightText: false,
     lightTextDesc: true,
@@ -27,13 +38,16 @@ export const homeObjectTwo = {
     imgStart: true,
     img: require('../../images/mindmap_2.svg').default,
     alt: 'study',
+    animation: animationDataTwo,
     dark: false,
     primary: false,
-    darkText: true
+    darkText: true,
+    colorWave: '#18213A',
 };
 
 export const homeObjectThree = {
     id: 'achievements',
+    to: '/Achievements',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
@@ -44,7 +58,29 @@ export const homeObjectThree = {
     imgStart: false,
     img: require('../../images/winners.svg').default,
     alt: 'study',
+    animation: animationDataThree,
     dark: true,
     primary: true,
-    darkText: false
-}
+    darkText: false,
+    colorWave: '#f9f9f9',
+};
+
+export const homeObjectFour = {
+    id: 'signup',
+    to: '/Signup',
+    lightBg: false,
+    lightText: true,
+    lightTextDesc: true,
+    topLine: 'Join Now',
+    headLine: 'Become a Decimetrians',
+    description: 'Be part of the best education community and connect with the world through our platform.',
+    buttonLabel: 'Get started',
+    imgStart: false,
+    img: require('../../images/winners.svg').default,
+    alt: 'study',
+    animation: animationDataFour,
+    dark: true,
+    primary: true,
+    darkText: false,
+    colorWave: '#f9f9f9',
+};

@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FaBars } from 'react-icons/fa';
 import logoBlanco from '../../images/Academy_Blanco.png';
+import { animateScroll as scroll } from 'react-scroll';
+
 import {
     Nav, 
     NavbarContainer,
@@ -16,12 +18,18 @@ import {
 } from './NavbarElements';
 
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggle}) => {    
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
+
     return (
         <>
         <Nav>
             <NavbarContainer>
-                <NavLogo to='/'><Img src={logoBlanco} /></NavLogo>
+                <NavLogo to='/' onClick={toggleHome}><Img src={logoBlanco} /></NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
@@ -30,20 +38,68 @@ const Navbar = ({toggle}) => {
 
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="about">About</NavLinks>
+                        <NavLinks 
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >
+                            About
+                        </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="learning">Learning</NavLinks>
+                        <NavLinks 
+                        to="learning"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >
+                            Learning
+                        </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="achievements">Achievements</NavLinks>
+                        <NavLinks 
+                        to="achievements"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >
+                            Achievements
+                        </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="signup">Sign Up</NavLinks>
+                        <NavLinks 
+                        to="services"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >
+                            Services
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks 
+                        to="signup"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        >
+                            Sign Up
+                        </NavLinks>
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                    <NavBtnLink to="/Login">Sign In</NavBtnLink>
                 </NavBtn>
 
                 </NavInfo>

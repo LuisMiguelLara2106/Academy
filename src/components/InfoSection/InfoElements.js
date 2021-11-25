@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
+import {MdArrowForward, MdArrowRight } from 'react-icons/md'
+
+import { Link as LinkR } from 'react-router-dom'
+
 export const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#18213A')};
 
     @media screen and (max-width: 768px) {
-        padding: 50px 0;
+        padding: 0px 0;
     }
 `;
 
@@ -95,4 +99,14 @@ export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+`;
+
+export const ArrowForward = styled(MdArrowForward)`
+    margin-left: 8px;
+    font-size: 20px;
+`;
+
+export const ArrowRight = styled(MdArrowRight)`
+    margin-right: 8px;
+    font-size: 20px;
 `;
