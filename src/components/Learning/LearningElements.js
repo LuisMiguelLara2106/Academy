@@ -46,12 +46,11 @@ export const ProgressCard = styled.div`
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
     border-radius: 10px;
-    max-height: 340px;
-    max-width: 190px;
-    padding: 30px;
+    height: 326px;
+    max-width: 220px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
     &:hover {
@@ -61,10 +60,26 @@ export const ProgressCard = styled.div`
     }
 `;
 
-export const ProgressIcon = styled.img`
-    height: 160px;
+export const ContainerLogo = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+`
+export const ProgressLogo = styled.img`
+    height: 38px;
     width: 160px;
-    margin-bottom: 10px;
+    margin-top: 13px;
+    margin-bottom: 47px;
+    /* margin-bottom: 10px; */
+`;
+
+export const ProgressIcon = styled.img`
+    height: 180px;
+    width: 220px;
+    /* padding-top: 48px; */
+    /* margin-top: 50px; */
+    border-radius: 0px 0px 10px 10px;
 `;
 
 export const ProgressH1 = styled.h1`
@@ -78,8 +93,9 @@ export const ProgressH1 = styled.h1`
 
 export const ProgressH2 = styled.h2`
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-top: 30px;
     color: #010606;
+    margin-left: 15%;
 `;
 
 export const ProgressP = styled.p`

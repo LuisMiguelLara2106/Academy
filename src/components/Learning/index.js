@@ -1,10 +1,11 @@
 import React from 'react';
 
-import IconTarget1 from '../../images/intro_img.png';
+import IconTarget1 from '../../images/intro_2_img.png';
 import IconTarget2 from '../../images/physics_img.png';
 import IconTarget3 from '../../images/maths_img.png';
 import IconTarget4 from '../../images/chemestry_img.png';
 import IconTarget5 from '../../images/problems_img.png';
+import Academy_logo from '../../images/Academy.png';
 
 import { 
     ContainerAdd,
@@ -14,7 +15,8 @@ import {
     ProgressIcon,
     ProgressH1,
     ProgressH2,
-    ProgressP
+    ContainerLogo,
+    ProgressLogo
  } from './LearningElements'
 
 const Learning = () => {
@@ -25,29 +27,27 @@ const Learning = () => {
                     <ProgressH1>PROGRESS</ProgressH1>
                         <ProgressWrapper>
                             <ProgressCard>
+                                <ProgressH2>Introduction to</ProgressH2>
+                                <ContainerLogo>
+                                    <ProgressLogo src={Academy_logo}/>
+                                </ContainerLogo>
                                 <ProgressIcon src={IconTarget1}/>
-                                <ProgressH2>Introduction</ProgressH2>
-                                <ProgressP>Lorem Ips dolor been uploaded processed lorem ipsum dolor</ProgressP>
                             </ProgressCard>
                             <ProgressCard>
-                                <ProgressIcon src={IconTarget2}/>
                                 <ProgressH2>Physics</ProgressH2>
-                                <ProgressP>Lorem Ips dolor been uploaded processed lorem ipsum dolor</ProgressP>
+                                <ProgressIcon src={IconTarget2}/>
                             </ProgressCard>
-                            <ProgressCard>
-                                <ProgressIcon src={IconTarget3}/>
+                            <ProgressCard>                               
                                 <ProgressH2>Mathematics</ProgressH2>
-                                <ProgressP>Lorem Ips dolor been uploaded processed lorem ipsum dolor</ProgressP>
+                                <ProgressIcon src={IconTarget3}/>
                             </ProgressCard>
-                            <ProgressCard>
-                                <ProgressIcon src={IconTarget4}/>
+                            <ProgressCard>                               
                                 <ProgressH2>Chemestry</ProgressH2>
-                                <ProgressP>Lorem Ips dolor been uploaded processed lorem ipsum dolor</ProgressP>
+                                <ProgressIcon src={IconTarget4}/>
                             </ProgressCard>
-                            <ProgressCard>
-                                <ProgressIcon src={IconTarget5}/>
+                            <ProgressCard>                                
                                 <ProgressH2>Problems Lake</ProgressH2>
-                                <ProgressP>Lorem Ips dolor been uploaded processed lorem ipsum dolor</ProgressP>
+                                <ProgressIcon src={IconTarget5}/>
                             </ProgressCard>
                         </ProgressWrapper>
                 </ProgressContainer>
