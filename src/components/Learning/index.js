@@ -1,7 +1,7 @@
 import React from 'react';
 
 import IconTarget1 from '../../images/intro_2_img.png';
-import IconTarget2 from '../../images/physics_img.png';
+import IconTarget2 from '../../images/physics_img_2.png';
 import IconTarget3 from '../../images/maths_img.png';
 import IconTarget4 from '../../images/chemestry_img.png';
 import IconTarget5 from '../../images/problems_img.png';
@@ -15,7 +15,11 @@ import {
     ProgressIcon,
     ProgressH1,
     ProgressH2,
+    ProgressH3,
     ContainerLogo,
+    ProgressButtons,
+    ButtonSyllabus,
+    ButtonResume,
     ProgressLogo
  } from './LearningElements'
 
@@ -34,19 +38,35 @@ const Learning = () => {
                                 <ProgressIcon src={IconTarget1}/>
                             </ProgressCard>
                             <ProgressCard>
-                                <ProgressH2>Physics</ProgressH2>
+                                <ProgressH3>Physics</ProgressH3>
+                                <ProgressButtons>
+                                    <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
+                                    <ButtonResume>RESUME</ButtonResume>
+                                </ProgressButtons>
                                 <ProgressIcon src={IconTarget2}/>
                             </ProgressCard>
                             <ProgressCard>                               
-                                <ProgressH2>Mathematics</ProgressH2>
+                                <ProgressH3>Mathematics</ProgressH3>
+                                <ProgressButtons>
+                                    <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
+                                    <ButtonResume>RESUME</ButtonResume>
+                                </ProgressButtons>
                                 <ProgressIcon src={IconTarget3}/>
                             </ProgressCard>
                             <ProgressCard>                               
-                                <ProgressH2>Chemestry</ProgressH2>
+                                <ProgressH3>Chemestry</ProgressH3>
+                                <ProgressButtons>
+                                    <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
+                                    <ButtonResume>RESUME</ButtonResume>
+                                </ProgressButtons>
                                 <ProgressIcon src={IconTarget4}/>
                             </ProgressCard>
                             <ProgressCard>                                
-                                <ProgressH2>Problems Lake</ProgressH2>
+                                <ProgressH3>Problems Lake</ProgressH3>
+                                <ProgressButtons>
+                                    <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
+                                    <ButtonResume>RESUME</ButtonResume>
+                                </ProgressButtons>
                                 <ProgressIcon src={IconTarget5}/>
                             </ProgressCard>
                         </ProgressWrapper>
