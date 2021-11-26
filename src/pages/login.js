@@ -5,7 +5,7 @@ import ScrollToTop from '../components/ScrollToTop';
 const LoginPage = () => {
     return (
         <>
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
             <Login />
         </>
     );
