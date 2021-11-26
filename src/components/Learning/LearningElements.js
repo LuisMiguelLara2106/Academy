@@ -22,12 +22,13 @@ export const ProgressContainer = styled.div`
     align-items: center;
     background-color: #f9f9f9;
     padding: 0 24px;
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
         height: 1100px;
     }
-    @media (max-width: 480px) {
-        height: 1300px;
+    @media (max-width: 668px) {
+        height: 2000px;
     }
+   
 `;
 
 export const ProgressWrapper = styled.div`
@@ -41,7 +42,7 @@ export const ProgressWrapper = styled.div`
     @media (max-width: 1100px) {
         grid-template-columns: repeat(3, 1fr);
     }
-    @media (max-width: 768px) {
+    @media (max-width: 668px) {
         grid-template-columns: repeat(1, 1fr);
         padding: 0 20px;
     }
@@ -62,6 +63,7 @@ export const ProgressCard = styled.div`
         transform: scale(1.05);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
+        box-shadow: 0px 10px 10px black;
     }
 `;
 
@@ -129,8 +131,17 @@ export const ButtonSyllabus = styled.button`
     margin-right: 25px;
     font-size: .5rem;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 6px;
     border: .8px solid #010606;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+        background: #f6f6f6;
+        color: #010606;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px gray;
+    }
 `;
 
 export const ButtonResume = styled.button`
@@ -138,6 +149,15 @@ export const ButtonResume = styled.button`
     padding: 5px;
     font-size: .5rem;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 6px;
     border: .8px solid #010606;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+        background: #f6f6f6;
+        color: #010606;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px gray;
+    }
 `;

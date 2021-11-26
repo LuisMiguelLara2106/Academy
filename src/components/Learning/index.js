@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+import Modal from '../Modal/index';
 
 import IconTarget1 from '../../images/intro_2_img.png';
 import IconTarget2 from '../../images/physics_3_img.png';
@@ -24,6 +26,13 @@ import {
  } from './LearningElements'
 
 const Learning = () => {
+
+    const [ showModal, setShowModal ] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    };
+
     return (
         <>
             <ContainerAdd>
@@ -41,7 +50,7 @@ const Learning = () => {
                                 <ProgressH3>Physics</ProgressH3>
                                 <ProgressButtons>
                                     <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
-                                    <ButtonResume>RESUME</ButtonResume>
+                                    <ButtonResume onClick={openModal}>RESUME</ButtonResume>
                                 </ProgressButtons>
                                 <ProgressIcon src={IconTarget2}/>
                             </ProgressCard>
@@ -71,6 +80,7 @@ const Learning = () => {
                             </ProgressCard>
                         </ProgressWrapper>
                 </ProgressContainer>
+                <Modal showModal={showModal} setShowModal={setShowModal} />
             </ContainerAdd>
             
         </>
