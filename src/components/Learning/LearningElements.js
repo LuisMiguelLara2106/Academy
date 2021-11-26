@@ -74,7 +74,7 @@ export const ProgressLogo = styled.img`
     height: 38px;
     width: 160px;
     margin-top: 13px;
-    margin-bottom: 47px;
+    margin-bottom: 54px;
     /* margin-bottom: 10px; */
 `;
 
@@ -107,7 +107,7 @@ export const ProgressH3 = styled.h2`
     justify-content: center;
     font-size: 1rem;
     margin-top: 35px;
-    margin-bottom: 45px;
+    margin-bottom: 65px;
     color: #010606;
 `;
 
@@ -120,10 +120,24 @@ export const ProgressP = styled.p`
 export const ProgressButtons = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 17px;
 `;
 
 export const ButtonSyllabus = styled.button`
+    width: 30%;
+    padding: 5px;
+    margin-right: 25px;
+    font-size: .5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: .8px solid #010606;
 `;
 
 export const ButtonResume = styled.button`
+    width: 30%;
+    padding: 5px;
+    font-size: .5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: .8px solid #010606;
 `;

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import IconTarget1 from '../../images/intro_2_img.png';
-import IconTarget2 from '../../images/physics_img_2.png';
-import IconTarget3 from '../../images/maths_img.png';
-import IconTarget4 from '../../images/chemestry_img.png';
-import IconTarget5 from '../../images/problems_img.png';
+import IconTarget2 from '../../images/physics_3_img.png';
+import IconTarget3 from '../../images/maths_img_3.png';
+import IconTarget4 from '../../images/chemestry_img_3.png';
+import IconTarget5 from '../../images/problems_img_3.png';
 import Academy_logo from '../../images/Academy.png';
 
 import { 
