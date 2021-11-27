@@ -1,11 +1,9 @@
 import React from 'react';
-import { Button, ButtonR } from '../ButtonElements';
+import { ButtonR } from '../ButtonElements';
 
 import AnimationTest from "../animations/index";
 
-import { useEffect, useState } from "react";
-
-import { Pulse } from "react-animation-wrapper";
+import { useState } from "react";
 
 
 import {
@@ -20,7 +18,6 @@ import {
     SubTitle,
     BtnWrap,
     ImgWrap,
-    Img,
     ArrowForward,
     ArrowRight,
 } from './InfoElements';

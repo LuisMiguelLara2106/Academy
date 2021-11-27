@@ -140,7 +140,7 @@ export const ButtonSyllabus = styled.button`
         background: #f6f6f6;
         color: #010606;
         cursor: pointer;
-        box-shadow: 0px 4px 4px gray;
+        box-shadow: 0px 2px 4px gray;
     }
 `;
 
@@ -158,6 +158,6 @@ export const ButtonResume = styled.button`
         background: #f6f6f6;
         color: #010606;
         cursor: pointer;
-        box-shadow: 0px 4px 4px gray;
+        box-shadow: 0px 2px 4px gray;
     }
 `;

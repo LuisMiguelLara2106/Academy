@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import {MdArrowForward, MdArrowRight } from 'react-icons/md'
 
-import { Link as LinkR } from 'react-router-dom'
+// import { Link as LinkR } from 'react-router-dom'
 
 export const InfoContainer = styled.div`
     color: #fff;

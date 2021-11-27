@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 import styled from 'styled-components';
 
@@ -18,7 +18,7 @@ export const ModalWrapper = styled.div`
     width: 800px;
     height: 500px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-    background: #fff;
+    background: #f9f9f9;
     color: #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,16 +31,19 @@ export const ModalImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius :10px 0 0 10px;
-    background: #000;
+    background: #18213A;
+    padding-left: 5px;
+    padding-right: 5px;
 `;
 
 export const ModalContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     line-height: 1.8;
     color: #141414;
+    padding: 15px;
 `;
 
 export const ModalText = styled.p`
@@ -49,7 +52,7 @@ export const ModalText = styled.p`
 
 export const ModalButton = styled.button`
     padding: 10px 24px;
-    background: #141414;
+    background: #18213A;
     color: #fff;
     border: none;
 `;
@@ -64,3 +67,40 @@ export const CloseModalButton = styled(MdClose)`
     padding: 0;
     z-index: 10;
 `;
+
+export const ModalTargetContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 12vh;
+    background-color: #f9f9f9;
+`;
+
+export const ModalCourse = styled.div`
+    display: flex;
+    align-items: start;
+    width: 90%;
+    /* padding: 60px 40px; */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    height: 90%;
+    box-shadow: 1px 1px 3px 1px #0000003d;
+    /* max-width: 1200px; */
+`;
+
+export const CourseImg = styled.img`
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    
+`;
+
+export const InfoCourse = styled.div`
+    margin: 2px;
+`
+
+export const TitleCouse = styled.h3`
+    
+`

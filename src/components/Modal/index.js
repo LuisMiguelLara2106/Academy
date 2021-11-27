@@ -1,8 +1,9 @@
 import React, {useRef, useEffect, useCallback} from 'react';
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import {useSpring, animated} from 'react-spring';
 
-import modalImg from '../../images/outer_space.svg';
+import modalImg from '../../images/teaching.svg';
+import courseImg from '../../images/calcular.png';
 
 import { 
      Background,
@@ -10,11 +11,21 @@ import {
      ModalContent, 
      ModalWrapper,
      ModalImg,
-     ModalText,
      CloseModalButton,
+     ModalTargetContainer,
+     ModalCourse,
+     CourseImg,
+     InfoCourse,
+     TitleCouse
     } from './ModalElements';
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ 
+    showModal, 
+    setShowModal, 
+    objectModal
+    }) => {
+
+    console.log(objectModal);
 
     const modalRef = useRef()
 
@@ -57,8 +68,16 @@ const Modal = ({ showModal, setShowModal }) => {
                 <ModalWrapper showModal={showModal}>
                     <ModalImg src={modalImg}/>
                     <ModalContent>
-                        <h1>Are u ready?</h1>
-                        <ModalText>Learn physics with the best teacher :v</ModalText>
+                        <h1>{objectModal.description}</h1>
+                        <h2>Cursos en progreso</h2>
+                        <ModalTargetContainer>
+                            <ModalCourse>
+                                <CourseImg src={courseImg}/>
+                                <InfoCourse>
+                                    <TitleCouse>Pre-Cálculo</TitleCouse>
+                                </InfoCourse>
+                            </ModalCourse>
+                        </ModalTargetContainer>
                         <ModalButton>Join Now</ModalButton>
                     </ModalContent>
                     <CloseModalButton

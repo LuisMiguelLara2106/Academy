@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { FaBars } from 'react-icons/fa';
 import logoBlanco from '../../images/Academy_Blanco.png';
 import { animateScroll as scroll } from 'react-scroll';
@@ -23,7 +23,6 @@ const Navbar = ({toggle}) => {
     const toggleHome = () => {
         scroll.scrollToTop();
     }
-
 
     return (
         <>
