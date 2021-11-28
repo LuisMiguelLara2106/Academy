@@ -2,8 +2,10 @@ import React, {useRef, useEffect, useCallback} from 'react';
 // import ReactDOM from "react-dom";
 import {useSpring, animated} from 'react-spring';
 
-import modalImg from '../../images/teaching.svg';
 import courseImg from '../../images/calcular.png';
+
+import { ProgressBar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { 
      Background,
@@ -16,7 +18,13 @@ import {
      ModalCourse,
      CourseImg,
      InfoCourse,
-     TitleCouse
+     TitleCouse,
+     ProgressCourse,
+     TitleTeacher,
+     TopLine,
+     Description,
+     ContainerInfoCourse,
+     ContainerButtonCourse
     } from './ModalElements';
 
 const Modal = ({ 
@@ -60,25 +68,35 @@ const Modal = ({
         [keyPress]
     );
 
+    const percentage = 50;
+
     return (
         <>
           {showModal ? (
             <Background ref={modalRef} onClick={closeModal}>
                 <animated.div style={animation}>
                 <ModalWrapper showModal={showModal}>
-                    <ModalImg src={modalImg}/>
+                    <ModalImg background={objectModal.imgBg} src={objectModal.modalImg}/>
                     <ModalContent>
-                        <h1>{objectModal.description}</h1>
-                        <h2>Cursos en progreso</h2>
+                        <TopLine>{objectModal.topLine}</TopLine>
+                        <Description>{objectModal.description}</Description>
                         <ModalTargetContainer>
                             <ModalCourse>
-                                <CourseImg src={courseImg}/>
-                                <InfoCourse>
-                                    <TitleCouse>Pre-Cálculo</TitleCouse>
-                                </InfoCourse>
+                                <ContainerInfoCourse>
+                                    <CourseImg src={courseImg}/>
+                                    <InfoCourse>
+                                        <TitleCouse>Pre-Calculus</TitleCouse>
+                                        <TitleTeacher>Luis Alejandro Fonseca</TitleTeacher>
+                                        <ProgressCourse>
+                                            <ProgressBar animated now={percentage} label={`${percentage}% completed`} />
+                                        </ProgressCourse>
+                                    </InfoCourse>
+                                </ContainerInfoCourse>
+                                <ContainerButtonCourse>
+                                    <ModalButton>Carry on</ModalButton>
+                                </ContainerButtonCourse>
                             </ModalCourse>
                         </ModalTargetContainer>
-                        <ModalButton>Join Now</ModalButton>
                     </ModalContent>
                     <CloseModalButton
                         aria-label='Close modal'

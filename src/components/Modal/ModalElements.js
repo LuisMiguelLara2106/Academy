@@ -31,9 +31,9 @@ export const ModalImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius :10px 0 0 10px;
-    background: #18213A;
-    padding-left: 5px;
-    padding-right: 5px;
+    background: ${({background}) => (background)};
+    padding-left: 30px;
+    padding-right: 30px;
 `;
 
 export const ModalContent = styled.div`
@@ -50,11 +50,22 @@ export const ModalText = styled.p`
     margin-bottom: 1rem;
 `;
 
+export const ContainerButtonCourse = styled.div`
+    width: 97%;
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+`;
+
 export const ModalButton = styled.button`
-    padding: 10px 24px;
+    padding: 3px 10px;
+    margin-top: .3rem;
     background: #18213A;
     color: #fff;
+    font-size: .8rem;
     border: none;
+    display: flex;
+    justify-content: end;
 `;
 
 export const CloseModalButton = styled(MdClose)`
@@ -74,12 +85,17 @@ export const ModalTargetContainer = styled.div`
     align-items: start;
     justify-content: center;
     width: 100%;
-    height: 12vh;
+    height: 14vh;
     background-color: #f9f9f9;
+`;
+export const ContainerInfoCourse = styled.div`
+    display: flex;
+    width: 100%;
 `;
 
 export const ModalCourse = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: start;
     width: 90%;
     /* padding: 60px 40px; */
@@ -90,17 +106,46 @@ export const ModalCourse = styled.div`
     /* max-width: 1200px; */
 `;
 
+export const TopLine = styled.p`
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0;
+`;
+
+export const Description = styled.p`
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0;
+
+`;
+
 export const CourseImg = styled.img`
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
     width: 45px;
-    height: 45px;
+    height: 50px;
     
 `;
 
 export const InfoCourse = styled.div`
-    margin: 2px;
+    width: 100%;
 `
 
 export const TitleCouse = styled.h3`
-    
-`
+    padding-top: 8px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: bolder;
+`;
+
+export const TitleTeacher = styled.p`
+    font-size: 10px;
+    margin: 0;
+`;
+
+export const ProgressCourse = styled.div`
+    width: 100%;
+    padding-right: 10px;
+`;
