@@ -78,7 +78,7 @@ export const LoginContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 600px;
     background-color: #f9f9f9;
 `;
 
@@ -101,7 +101,7 @@ export const LoginForm = styled.form`
         width: 70%;
     }
     @media screen and (max-width: 450px) {
-        width: 90%;
+        width: 80%;
     }
     `;
 
@@ -143,8 +143,8 @@ export const LoginWrapper = styled.div`
     width: 100%;
     max-width: 1100px;
     padding-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: #f9f9f9;
     display: flex;
     justify-content: center;
