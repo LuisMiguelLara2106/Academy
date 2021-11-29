@@ -21,6 +21,7 @@ export const Button = styled(LinkS)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: ${({primary}) => (primary ? '#fff' : '#8B63FF')};
+        color: ${({dark}) => (dark ? '#010606' : '#fff')};
     }
 `;
 
@@ -44,5 +45,6 @@ export const ButtonR = styled(LinkR)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: ${({primary}) => (primary ? '#fff' : '#8B63FF')};
+        color: ${({dark}) => (dark ? '#010606' : '#fff')};
     }
 `;

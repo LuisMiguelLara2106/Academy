@@ -2,11 +2,18 @@ import styled from 'styled-components';
 import {MdArrowForward, MdArrowRight } from 'react-icons/md'
 import {Link as LinkR} from 'react-router-dom';
 
-
+export const ContainerAdd = styled.div`
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
 
 export const NavBar = styled.div`
     background: #18213A;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +51,6 @@ export const NavbarLogo = styled(LinkR)`
         transition: all 0.2s ease-in-out;
         color: #8B63FF;
     }
-    
 `;
 
 export const Img = styled.img`
@@ -69,11 +75,10 @@ export const Img = styled.img`
 
 export const LoginContainer = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     background-color: #f9f9f9;
 `;
 
@@ -134,16 +139,16 @@ export const ImgWrap = styled.div`
 
 
 export const LoginWrapper = styled.div`
-    display: grid;
-    z-index: 1;
-    height: 860px;
+    height: 100%;
     width: 100%;
     max-width: 1100px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 24px;
-    justify-content: center;
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const InfoRow = styled.div`
@@ -152,7 +157,7 @@ export const InfoRow = styled.div`
     align-items: center;
     grid-template-areas: ${({imgStart}) => imgStart ? `'col2 col1'`: `'col1 col2'`};
     
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         grid-template-areas: ${({imgStart}) => imgStart ? `'col1' 'col2'`: `'col1 col1' 'col2 col2'`}
     }
 `;
@@ -166,8 +171,9 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
     margin-bottom: 0px;
     margin-top: 30px;
-    padding: 0 15px;
     grid-area: col2;
+    display: flex;
+    justify-content: center;
 `;
 
 export const SocialIcons = styled.div`
@@ -180,6 +186,11 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: #222729;
   font-size: 24px;
+
+  &:hover {
+        transition: all 0.2s ease-in-out;
+        color: #8B63FF;
+  }
 `;
 
 export const Divider = styled.div`

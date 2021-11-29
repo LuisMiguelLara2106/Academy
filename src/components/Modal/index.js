@@ -93,7 +93,7 @@ const Modal = ({
                                     </InfoCourse>
                                 </ContainerInfoCourse>
                                 <ContainerButtonCourse>
-                                    <ModalButton>Carry on</ModalButton>
+                                    <ModalButton>{objectModal.buttonLabel}</ModalButton>
                                 </ContainerButtonCourse>
                             </ModalCourse>
                         </ModalTargetContainer>

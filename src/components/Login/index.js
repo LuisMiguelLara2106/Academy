@@ -9,6 +9,7 @@ import animation from "../../lotties/academy-guy.json";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGoogle } from "react-icons/fa";
 
 import {
+    ContainerAdd,
     NavBar,
     NavbarLogo,
     NavbarContainer,
@@ -41,12 +42,12 @@ const Login = () => {
 
     return (
         <>
+        <ContainerAdd>
             <NavBar>
             <NavbarContainer>
                 <NavbarLogo to='/'><Img src={logoBlanco} /></NavbarLogo>
             </NavbarContainer>
             </NavBar>
-
             <LoginWrapper>
                     <InfoRow> 
                         <Column1>
@@ -97,6 +98,8 @@ const Login = () => {
                         </Column2>
                     </InfoRow>
             </LoginWrapper> 
+
+        </ContainerAdd>
         </>
     )
 }
