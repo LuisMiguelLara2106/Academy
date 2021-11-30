@@ -2,7 +2,10 @@ import React, { useState } from "react";
 
 import Modal from "../Modal/index";
 
+import Syllabus from "../Syllabus/index";
+
 import { modalObjectMaths, modalObjectPhysics, modalObjectChemestry, modalObjectProblems } from "../Modal/Data";
+import { syllabusObjectMaths, syllabusObjectPhysics, syllabusObjectChemestry, syllabusObjectProblems } from "../Syllabus/Data";
 
 import IconTarget1 from "../../images/intro_2_img.png";
 import IconTarget2 from "../../images/physics_3_img.png";
@@ -32,7 +35,6 @@ const Learning = () => {
 
   const [objectModal, setObjectModal] = useState({});
 
-
   const openModal = (event) => {
     const id = event.target.id;
 
@@ -56,6 +58,34 @@ const Learning = () => {
     setShowModal((prev) => !prev);
   };
 
+
+  const [showSyllabus, setShowSyllabus] = useState(false);
+
+  const [objectSyllabus, setObjectSyllabus] = useState({});
+
+  const openSyllabus = (event) => {
+    const id = event.target.id;
+
+    switch (id) {
+      case "maths":
+        setObjectSyllabus(syllabusObjectMaths);
+        break;
+      case "physics":
+        setObjectSyllabus(syllabusObjectPhysics);
+        break;
+      case "chemestry":
+        setObjectSyllabus(syllabusObjectChemestry);
+        break;
+      case "problems":
+        setObjectSyllabus(syllabusObjectProblems);
+        break;
+
+      default:
+        break;
+    }
+    setShowSyllabus((prev2) => !prev2);
+  };
+
   return (
     <>
       <ContainerAdd>
@@ -72,7 +102,8 @@ const Learning = () => {
             <ProgressCard>
               <ProgressH3>Physics</ProgressH3>
               <ProgressButtons>
-                <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
+                <ButtonSyllabus id="physics" onClick={openSyllabus}>
+                  SYLLABUS</ButtonSyllabus>
                 <ButtonResume id="physics" onClick={openModal}>
                   RESUME
                 </ButtonResume>
@@ -82,7 +113,8 @@ const Learning = () => {
             <ProgressCard>
               <ProgressH3>Mathematics</ProgressH3>
               <ProgressButtons>
-                <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
+                <ButtonSyllabus id="maths" onClick={openSyllabus}
+                >SYLLABUS</ButtonSyllabus>
                 <ButtonResume id="maths" onClick={openModal}>
                   RESUME
                 </ButtonResume>
@@ -92,16 +124,20 @@ const Learning = () => {
             <ProgressCard>
               <ProgressH3>Chemestry</ProgressH3>
               <ProgressButtons>
-                <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
-                <ButtonResume id="chemestry" onClick={openModal}>RESUME</ButtonResume>
+                <ButtonSyllabus id="chemestry" onClick={openSyllabus}>
+                  SYLLABUS</ButtonSyllabus>
+                <ButtonResume id="chemestry" onClick={openModal}>
+                  RESUME</ButtonResume>
               </ProgressButtons>
               <ProgressIcon src={IconTarget4} />
             </ProgressCard>
             <ProgressCard>
               <ProgressH3>Problems Lake</ProgressH3>
               <ProgressButtons>
-                <ButtonSyllabus>SYLLABUS</ButtonSyllabus>
-                <ButtonResume id="problems" onClick={openModal}>RESUME</ButtonResume>
+                <ButtonSyllabus id="problems" onClick={openSyllabus}>
+                  SYLLABUS</ButtonSyllabus>
+                <ButtonResume id="problems" onClick={openModal}>
+                  RESUME</ButtonResume>
               </ProgressButtons>
               <ProgressIcon src={IconTarget5} />
             </ProgressCard>
@@ -111,6 +147,11 @@ const Learning = () => {
           showModal={showModal}
           setShowModal={setShowModal}
           objectModal={objectModal}
+        />
+        <Syllabus
+          showSyllabus={showSyllabus}
+          setShowSyllabus={setShowSyllabus}
+          objectSyllabus={objectSyllabus}
         />
       </ContainerAdd>
     </>
