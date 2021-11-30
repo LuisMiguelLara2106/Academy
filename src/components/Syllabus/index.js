@@ -16,7 +16,17 @@ import {
      SyllabusIconsData,
      SyllabusProgram,
      ProgramTopLine,
-     ProgramSubTitle
+     ProgramSubTitle,
+     ConnectSyllabusButton,
+     TimeSyllabusButton,
+     PriseyllabusButton,
+     SyllabusIcon,
+     SyllabusTargetItems,
+     ItemNumber,
+     ItemInfo,
+     TitleItem,
+     MediaIcon,
+     ProblemsIcon
     } from './SyllabusElements';
 
 const Syllabus = ({ 
@@ -27,7 +37,7 @@ const Syllabus = ({
 
     console.log(objectSyllabus);
 
-    const modalRef = useRef()
+    const syllabusRef = useRef()
 
     const animation = useSpring({
         config: {
@@ -38,7 +48,7 @@ const Syllabus = ({
     });
 
     const closeSyllabus = e => {
-        if (modalRef.current === e.target) {
+        if (syllabusRef.current === e.target) {
             setShowSyllabus(false);
         }
     };
@@ -63,7 +73,7 @@ const Syllabus = ({
     return (
         <>
           {showSyllabus ? (
-            <Background ref={modalRef} onClick={closeSyllabus}>
+            <Background ref={syllabusRef} onClick={closeSyllabus}>
                 <animated.div style={animation}>
                 <SyllabusWrapper showSyllabus={showSyllabus}>
                     <SyllabusContent>
@@ -73,15 +83,40 @@ const Syllabus = ({
                         <Description>{objectSyllabus.description}</Description>
                       </SyllabusInfo>
                       <SyllabusIconsData>
-
+                        <SyllabusIcon>
+                          <ConnectSyllabusButton></ConnectSyllabusButton>
+                          <a>Completely online</a>
+                        </SyllabusIcon>
+                        <SyllabusIcon>
+                          <TimeSyllabusButton></TimeSyllabusButton>
+                          <a>Completely online</a>
+                        </SyllabusIcon>
+                        <SyllabusIcon>
+                          <PriseyllabusButton></PriseyllabusButton>
+                          <a>Free content</a>
+                        </SyllabusIcon>
                       </SyllabusIconsData>
                     </SyllabusContent>
                     <SyllabusProgram>
                       <ProgramTopLine>{objectSyllabus.program}</ProgramTopLine>
                       <ProgramSubTitle>What will you learn on this route</ProgramSubTitle>
+                      <SyllabusTargetItems>
+                        <ItemNumber>Course 1</ItemNumber>
+                        <ItemInfo>
+                          <TitleItem>Pre-Calculus</TitleItem>
+                          <SyllabusIcon>
+                            <MediaIcon></MediaIcon>
+                            <a>74 videos</a>
+                          </SyllabusIcon>
+                          <SyllabusIcon>
+                            <ProblemsIcon></ProblemsIcon>
+                            <a>2000 problems</a>
+                          </SyllabusIcon>
+                        </ItemInfo>
+                      </SyllabusTargetItems>
                     </SyllabusProgram>
                     <CloseSyllabusButton
-                        aria-label='Close modal'
+                        aria-label='Close syllabus'
                         onClick={() => setShowSyllabus(prev2 => !prev2)}
                     />
                 </SyllabusWrapper>
