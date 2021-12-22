@@ -149,6 +149,7 @@ export const SyllabusTargetItems = styled.div`
     height: 110px;
     display: flex;
     align-items: center;
+    border-bottom-style: inset;
 `;
 
 export const ItemNumber = styled.div`
@@ -164,7 +165,6 @@ export const ItemInfo = styled.div`
     margin: 15px;
     display: flex;
     flex-direction: column;
-    border-bottom-style: inset;
 `;
 
 export const TitleItem = styled.p`
